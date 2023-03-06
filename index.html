@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kantor</title>
+    <script src="JS/script.js" defer></script>
+    <link href="CSS/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;700&family=Lora:wght@400;600&family=Tilt+Neon&display=swap"
+        rel="stylesheet">
+</head>
+
+<body class="body">
+    <div>
+        <form class="js-form form">
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">🤑 Kalkulator walut 🤑</legend>
+                <p class="form__text">Wybierz walutę: 
+                    <select class="js-select form__select">
+                        <option value="PHP">Pesos filipińskie</option>
+                        <option value="ZAR">Randy południowoafrykańskie</option>
+                        <option value="ILS">Nowe szekle izraelskie</option>
+                    </select>
+                </p>
+                <p>
+                    <label class="form__label">
+                        Kwota w PLN: <input class="js-cash form__input" required type="number" step="0.01" min="0">
+                    </label>
+                </p>
+
+            </fieldset>
+            <p class="form__result"> Pieniążki po wymianie: 
+                <span class="js-result"></span>
+            </p>
+            <p class="form__information">Obliczenia wykonane na podstawie kursu z dnia 28.02.2023</p>
+        </form>
+    </div>
+</body>
+
+</html>
