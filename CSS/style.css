@@ -7,6 +7,11 @@ html {
  }
 
  .body {
+    resize: both;
+    overflow: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-image: url("../images/background.png");
     font-family: 'Cairo', sans-serif;
  }
