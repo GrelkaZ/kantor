@@ -7,14 +7,16 @@ html {
  }
 
  .body {
-    background-color: rgb(242, 242, 246);
+    background-image: url("../images/background.png");
     font-family: 'Cairo', sans-serif;
  }
 
  .form {
+    background-color: #efefefd6;
     max-width: 600px;
     margin: auto;
     padding: 30px;
+    border-radius: 8px;
  }
 
  .form__fieldset {
