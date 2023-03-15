@@ -4,10 +4,6 @@
         const ZAR = 4.15;
         const ILS = 0.83;
         
-        if (amount < 0) {
-            resultElement.innerText = "Podaj wartość niemniejszą niż 0";
-        }
-        else
             switch (currency) {
                 case "PHP": return PHP * amount;
                 case "ZAR": return ZAR * amount;
@@ -15,8 +11,12 @@
             }
     }
 
-    const updateResultText = (result, currency) => {
+    const updateResultText = (amount, result, currency) => {
         const resultElement = document.querySelector(".js-result");
+        if (amount < 0) {
+            resultElement.innerText = "Podaj wartość niemniejszą niż 0";
+        }
+        else
         resultElement.innerText = `${result.toFixed(2)} ${currency}`;
     }
 
