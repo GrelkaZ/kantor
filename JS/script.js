@@ -1,30 +1,32 @@
 {
-    const calculateOption = (cash, option) => {
-
+    const calculateResult = (amount, currency) => {
         const PHP = 12.4;
         const ZAR = 4.15;
         const ILS = 0.83;
-
-        switch (option) {
-            case "PHP": return PHP * cash;
-            case "ZAR": return ZAR * cash;
-            case "ILS": return ILS * cash;
+        
+        if (amount < 0) {
+            resultElement.innerText = "Podaj wartość niemniejszą niż 0";
         }
+        else
+            switch (currency) {
+                case "PHP": return PHP * amount;
+                case "ZAR": return ZAR * amount;
+                case "ILS": return ILS * amount;
+            }
     }
 
-    const updateResultText = (newCash, option) => {
+    const updateResultText = (result, currency) => {
         const resultElement = document.querySelector(".js-result");
-        resultElement.innerText = `${newCash.toFixed(2)} ${option}`;
+        resultElement.innerText = `${result.toFixed(2)} ${currency}`;
     }
-    
-    const onFormSubmit = () => {
 
-        const cashElement = document.querySelector(".js-cash");
+    const onFormSubmit = () => {
+        const amountElement = document.querySelector(".js-amount");
         const selectElement = document.querySelector(".js-select");
 
-        const option = selectElement.value;
-        const newCash = calculateOption(cashElement.value, option);
-        updateResultText(newCash, option);
+        const currency = selectElement.value;
+        const result = calculateResult(amountElement.value, currency);
+        updateResultText(result, currency);
     };
 
     const init = () => {
